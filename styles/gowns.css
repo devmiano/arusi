@@ -17,7 +17,6 @@
   font-family: var(--text);
   margin-bottom: 4rem;
   letter-spacing: 5px;
-  li
 }
 
 .paragraph {
@@ -27,7 +26,7 @@
 }
 
 .dress {
-  width: 540px;
+  width: 240px;
   margin-right: 9rem;
   border-radius: 500px 500px 0 0;
 }
@@ -37,14 +36,14 @@
 }
 
 .btn-amount {
-  width: 20rem;
+  width: 140px;
   text-align: center;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 30px;
-  padding: 2rem 5rem;
+  font-size: 16px;
+  padding: 16px;
   margin-top: 3rem;
   background-color: #724665;
-  color: #ffebe7;
+  color: var(--accent2);
   border: none;
 }

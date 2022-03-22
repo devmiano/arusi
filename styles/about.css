@@ -1,0 +1,10 @@
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+h2 {
+    align-items: right;
+}

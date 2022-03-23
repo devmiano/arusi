@@ -9,7 +9,7 @@
 @import url('examples.css');
 
 :root {
-  --text: #724665;
+  --textColor: #724665;
   --white: #ffebe7;
   --accent1: #ffaa99;
   --accent2: #ffcbc2;
@@ -21,4 +21,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.secttion-wrapper {
+  margin: 0 auto;
+  width: 80%;
 }

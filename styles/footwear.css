@@ -18,34 +18,44 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding-left: 100px;
 }
 
 .footwear-content {
-  width: 400px;
+  width: 250px;
   display: flex;
   flex-direction: column;
 }
 
 .footwear-title h3 {
+  font-size: 20px;
   margin-bottom: 50px;
   float: right;
   font-family: var(--text);
-  font: 36px;
+  font-size: 24px;
   color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #724665;
 }
 
 .para {
   font-family: var(--text);
   font-size: 24px;
+  padding: 50px 0px;
+  justify-content: center;
+  color: #724665;
 }
 
 .footwear-btn {
   background-color: #724665;
-  padding: 20px 64px;
   border: none;
-  font-size: 24px;
-  color: white;
+  padding: 16px;
+  border: none;
+  font-size: 16px;
+  color: #ffcbc2;
   margin-top: 50px;
+  display: inline-block;
+  font-family: var(--text);
+  width: 140px;
 }

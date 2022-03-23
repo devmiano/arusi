@@ -33,19 +33,21 @@ h3 {
   float: right;
   font-family: var(--text);
   font: 36px;
-  color: var(--text);
+  color: var(--textColor);
 }
 
 .para {
   font-family: var(--text);
   font-size: 24px;
+  color: var(--textColor);
 }
 
 .footwear-btn {
-  background-color: #724665;
-  padding: 20px 64px;
+  background-color: var(--textColor);
+  padding: 20px;
   border: none;
   font-size: 24px;
-  color: white;
+  color: var(--accent2);
   margin-top: 50px;
+  width: 15rem;
 }

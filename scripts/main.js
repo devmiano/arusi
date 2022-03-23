@@ -58,6 +58,22 @@ $(document).ready(function(){
         $('.footwear-modal').toggle('hide');
     })
 
+    // When the Total Order Button is clicked
+    $('.total-order-btn').click(function(){
+      $('.overlay').toggle('hide');
+      $('.cart-modal').toggle('hide');
+    })
+
+    $('.gowns-order-btn').click(function(){
+      $('.overlay2').toggle('hide');
+      $('.gowns-modal').toggle('hide');
+    })
+
+    $('.fw-order-btn').click(function(){
+      $('.overlay3').toggle('hide');
+      $('.footwear-modal').toggle('hide');
+    })
+
     // When a user clicks on the amount button
     $('.modal-item-btn').click(function(){
         $(this).css('backgroundColor', '#4e854e');

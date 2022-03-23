@@ -345,7 +345,30 @@
     border-radius: 5px;
     cursor: pointer;
     transition: linear ease-in .3s;
-    /* color: #4e854e; */
+}
+
+.fw-order-btn {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--accent1);
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: linear ease-in .3s;
+}
+
+.gowns-order-btn {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--accent1);
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: linear ease-in .3s;
 }
 
 

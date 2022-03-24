@@ -76,7 +76,6 @@ $(document).ready(function(){
     $('.total-order-btn').click(function(){
       $('.overlay').toggle('hide');
       $('.cart-modal').toggle('hide');
-      console.log(orderTotal());
       
     })
 
@@ -92,45 +91,18 @@ $(document).ready(function(){
     })
 
     // When a user clicks on the amount button
-    $('.modal-item-btn').click(function(){
+    let cost = 0;
+    let totalItems = 0;
+    $('.modal-item-btn').click(function () {
+        
         $(this).css('backgroundColor', '#4e854e');
         $(this).text("Added");
+        cost += parseInt($(this).attr('value'))
+        $('.fw-order-btn').html("Items selected: " + ++totalItems + '<br/>' + "total cost: " + cost);  
+    })    
         
-        let carts = document.querySelectorAll(".modal-item-btn");
-        
-        for (let i = 0; i < carts.length; i++) {
-        carts[i].addEventListener("click", () => {
-            cartNumbers(carts);
-        });
-        }
-        
-        function cartNumbers(){
 
-            let amount = document.querySelectorAll(".modal-item-btn").value;
-            let productNumbers = localStorage.getItem("cartNumbers");
-            console.log(productNumbers);
-            productNumbers = parseInt(productNumbers);
-            
-            if( productNumbers){
-                localStorage.setItem("cartNumbers", productNumbers + 1);
-                document.querySelector(".total-order-btn span").textContent =
-                    productNumbers + 1;
-                document.querySelector(".cart-counter").textContent =
-                    productNumbers + 1;
-                $('.i').text($('.modal-item-title').text());
-                $('.amount').text($(parseInt(amount)));
-
-                $('.cart-empty').hide();
-                $('.order-counter').text(productNumbers + 1);
-            }
-            // else{
-            //     localStorage.setItem("cartNumbers", 1) ;
-            //     document.querySelector(".total-order-btn span").textContent = 1;
-            //     document.querySelector(".cart-counter").textContent = 1;
-            // }
-        }
-        
-    });
+       
 
     // When the Cart Icon is clicked
     $('.shopping-cart-btn').click(function(){

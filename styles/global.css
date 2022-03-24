@@ -6,7 +6,7 @@
 @import url('gowns.css');
 @import url('footwear.css');
 @import url('footer.css');
-@import url('examples.css');
+@import url('modal.css');
 
 :root {
   --textColor: #724665;
@@ -22,6 +22,10 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .secttion-wrapper {

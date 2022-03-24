@@ -3,6 +3,7 @@
 $(document).ready(function () {
     let totalItems = 0
     let cost = 0
+$(document).ready(function(){
 
     // When the Jewel button is clicked
     $('.jewel-btn').click(function () {
@@ -61,6 +62,7 @@ $(document).ready(function () {
     })
 
     // When the Total Order Button is clicked
+
     $('.total-order-btn').click(function () {
         $('.overlay').toggle('hide');
         $('.cart-modal').toggle('hide');
@@ -70,6 +72,21 @@ $(document).ready(function () {
     $('.gowns-order-btn').click(function () {
         $('.overlay2').toggle('hide');
         $('.gowns-modal').toggle('hide');
+
+    const orderTotal = function(){
+        $('.modal-item-btn').click(function(){
+            console.log($(this).val());
+        })    
+    }
+
+    $('.total-order-btn').click(function(){
+      $('.overlay').toggle('hide');
+      $('.cart-modal').toggle('hide');
+    })
+
+    $('.gowns-order-btn').click(function(){
+      $('.overlay2').toggle('hide');
+      $('.gowns-modal').toggle('hide');
     })
 
     $('.fw-order-btn').click(function () {
@@ -86,27 +103,52 @@ $(document).ready(function () {
         
     })
     });
-   // let carts = document.querySelectorAll(".modal-item-btn");
- 
-//for (let i = 0; i < carts.length; i++) {
- //carts[i].addEventListener("click", () => {
-  //  cartNumbers();
- //});
-//}
-  
- //adding items to the cart
-//function cartNumbers() {
-    //let productNumbers = localStorage.getItem("cartNumbers");
-    //console.log(productNumbers);
-    //productNumbers = parseInt(productNumbers);
- 
-   // if (productNumbers) {
-     //   localStorage.setItem("cartNumbers", productNumbers + 1);
-       // document.querySelector(".total-order-btn span").textContent =
-         //   productNumbers + 1;
-    //} else {
-      //  localStorage.setItem("cartNumbers", 1);
-        //document.querySelector(".total-order-btn span").textContent = 1;
-  //  }
 
-//};
+    let cost = 0;
+    let totalItems = 0;
+    $('.modal-item-btn').click(function () {
+        
+        $(this).css('backgroundColor', '#4e854e');
+        $(this).text("Added");
+        cost += parseInt($(this).attr('value'))
+        $('.fw-order-btn').html("Items selected: " + ++totalItems + '<br/>' + "total cost: " + cost);  
+    })
+
+    // When the Cart Icon is clicked
+    $('.shopping-cart-btn').click(function(){
+        $('.shop-cart-modal').slideToggle('medium');
+    })
+    
+// Jewlery modal function for total cost
+  
+     let totalJewelryItems = 0;
+     let jewelryCost = 0;
+    
+    // onLoadCartNumbers()
+     $(".jbtn").click(function () {
+       $(this).css("backgroundColor", "#4e854e");
+       $(this).text("Added");
+       jewelryCost += parseInt($(this).attr("value"));
+       $(".jcost div").html(
+         "Items selected: " +
+           ++totalJewelryItems +
+           "<br/>" +
+           "total cost: " +
+           jewelryCost
+       );
+     });
+    // When the close cart icon is clicked
+    $('.close-cart').click(function(){
+        $('.shop-cart-modal').slideToggle('medium');
+    })   
+
+    // When Complete Order button is clicked
+    $('.complete-order').click(function(){
+        $('.complete-order').toggle('hide');
+        $('.cart-order-total').toggle('hide');
+        $('.cart-order-items').hide();
+        $('.cart-counter').text("0");
+        $('.alert').toggle('show');
+    })
+})
+

@@ -24,6 +24,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .secttion-wrapper {
   margin: 0 auto;
   width: 80%;

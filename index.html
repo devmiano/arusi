@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="styles/global.css" />
   </head>
   <body>
+
+    <!-- SHOPPING CART MODAL -->
+    <div class="shop-cart-modal">
+      <div class="shop-cart-wrapper">
+        <span class="close-cart" title="Close Cart">x</span>
+        <p class="cart-order-title">Your Orders!</p>
+        <p class="cart-order-items"><span class="i"></span> - <span class="amount"></span></p>
+        <p class="cart-empty">Cart is Empty</p>
+        <p class="cart-order-total">Qty: <span class="order-counter"></span> Items</p>
+        <p class="alert">Thank you, your order was placed successfully!</p>
+        <button class="complete-order">Complete Order</button>
+      </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-wrapper">
@@ -66,7 +80,7 @@
                   Get your guests talking about your choice of jewelry.
                 </p>
               </div>
-              <button class="modal-item-btn" value="2500">KSH 2500</button>
+              <button class="modal-item-btn" value="2500" id="jb-1">KSH 2500</button>
             </div>
           </div>
           <!-- Row 2 -->
@@ -82,7 +96,7 @@
                   Get your guests talking about your choice of jewelry.
                 </p>
               </div>
-              <button class="modal-item-btn" value="18000">KSH 18000</button>
+              <button class="modal-item-btn" value="18000" id="jb-2">KSH 18000</button>
             </div>
           </div>
 
@@ -99,12 +113,12 @@
                   Get your guests talking about your choice of jewelry.
                 </p>
               </div>
-              <button class="modal-item-btn" value="18000">KSH 18000</button>
+              <button class="modal-item-btn" value="18000" id="jb-3">KSH 18000</button>
             </div>
           </div>
           <!-- Total Order -->
           <div class="total-order">
-            <button class="total-order-btn">Total Order</button>
+            <button class="total-order-btn">Total Order: <span></span></button>
           </div>
         </div>
       </div>

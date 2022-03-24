@@ -1,6 +1,8 @@
 'use strict';
 
 $(document).ready(function(){
+    
+
 
     // When the Jewel button is clicked
     $('.jewel-btn').click(function(){
@@ -80,6 +82,23 @@ $(document).ready(function(){
         $(this).text("Added");
         console.log(this);
     })
-
     
+
+     let totalJewelryItems = 0;
+     let jewelryCost = 0;
+    
+    // onLoadCartNumbers()
+     $(".jbtn").click(function () {
+       $(this).css("backgroundColor", "#4e854e");
+       $(this).text("Added");
+       jewelryCost += parseInt($(this).attr("value"));
+       $(".jcost div").html(
+         "Items selected: " +
+           ++totalJewelryItems +
+           "<br/>" +
+           "total cost: " +
+           jewelryCost
+       );
+     });
 })
+

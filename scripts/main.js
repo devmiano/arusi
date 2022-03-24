@@ -121,7 +121,7 @@ $(document).ready(function () {
       $(this).css('backgroundColor', '#4e854e');
       $(this).text('Added');
       fCost += parseInt($(this).attr('value'));
-      $('.fw-order-btn').html(
+      $('.fcost').html(
         'Items selected: ' + ++fTotalItems + '<br/>' + 'total cost: ' + fCost
       );
     });
@@ -141,7 +141,7 @@ $(document).ready(function () {
       $(this).css('backgroundColor', '#4e854e');
       $(this).text('Added');
       jewelryCost += parseInt($(this).attr('value'));
-      $('.jcost div').html(
+      $('.jcost').html(
         'Items selected: ' +
           ++totalJewelryItems +
           '<br/>' +

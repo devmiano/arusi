@@ -1,121 +1,123 @@
-'use strict';
+"use strict";
 
 $(document).ready(function () {
   let totalItems = 0;
   let cost = 0;
   $(document).ready(function () {
     // When the Jewel button is clicked
-    $('.jewel-btn').click(function () {
-      $('.overlay').toggle();
-      $('.cart-modal').slideDown();
+    $(".jewel-btn").click(function () {
+      $(".overlay").toggle();
+      $(".cart-modal").slideDown();
     });
 
     // When overlay is clicked
-    $('.overlay').click(function () {
-      $('.overlay').toggle('hide');
-      $('.cart-modal').toggle('hide');
+    $(".overlay").click(function () {
+      $(".overlay").toggle("hide");
+      $(".cart-modal").toggle("hide");
     });
 
     // When Gowns modal is clicked
-    $('.gowns-btn').click(function () {
-      $('.overlay2').toggle();
-      $('.gowns-modal').slideDown();
+    $(".gowns-btn").click(function () {
+      $(".overlay2").toggle();
+      $(".gowns-modal").slideDown();
     });
 
     // When overlay2 is clicked
-    $('.overlay2').click(function () {
-      $('.overlay2').toggle('hide');
-      $('.gowns-modal').toggle('hide');
+    $(".overlay2").click(function () {
+      $(".overlay2").toggle("hide");
+      $(".gowns-modal").toggle("hide");
     });
 
     // FOOTWEAR MODAL
     // When Footwear modal is clicked
-    $('.footwear-btn').click(function () {
-      $('.overlay3').toggle();
-      $('.footwear-modal').slideDown();
+    $(".footwear-btn").click(function () {
+      $(".overlay3").toggle();
+      $(".footwear-modal").slideDown();
     });
 
     // When overlay2 is clicked
-    $('.overlay3').click(function () {
-      $('.overlay3').toggle('hide');
-      $('.footwear-modal').toggle('hide');
+    $(".overlay3").click(function () {
+      $(".overlay3").toggle("hide");
+      $(".footwear-modal").toggle("hide");
     });
 
     // When the close modal button is clicked
-    $('.close-btn').click(function () {
-      $('.overlay').toggle('hide');
-      $('.cart-modal').toggle('hide');
+    $(".close-btn").click(function () {
+      $(".overlay").toggle("hide");
+      $(".cart-modal").toggle("hide");
     });
 
     // When the gown close modal button is clicked
-    $('.close-gowns').click(function () {
-      $('.overlay2').toggle('hide');
-      $('.gowns-modal').toggle('hide');
+    $(".close-gowns").click(function () {
+      $(".overlay2").toggle("hide");
+      $(".gowns-modal").toggle("hide");
     });
 
     // When the footwear close modal button is clicked
-    $('.close-footwear').click(function () {
-      $('.overlay3').toggle('hide');
-      $('.footwear-modal').toggle('hide');
+    $(".close-footwear").click(function () {
+      $(".overlay3").toggle("hide");
+      $(".footwear-modal").toggle("hide");
     });
 
     // When the Total Order Button is clicked
 
-    $('.total-order-btn').click(function () {
-      $('.overlay').toggle('hide');
-      $('.cart-modal').toggle('hide');
+    $(".total-order-btn").click(function () {
+      $(".overlay").toggle("hide");
+      $(".cart-modal").toggle("hide");
     });
 
-    $('.gowns-order-btn').click(function () {
-      $('.overlay2').toggle('hide');
-      $('.gowns-modal').toggle('hide');
+    $(".gowns-order-btn").click(function () {
+      $(".overlay2").toggle("hide");
+      $(".gowns-modal").toggle("hide");
 
       const orderTotal = function () {
-        $('.modal-item-btn').click(function () {
+        $(".modal-item-btn").click(function () {
           console.log($(this).val());
         });
       };
 
-      $('.total-order-btn').click(function () {
-        $('.overlay').toggle('hide');
-        $('.cart-modal').toggle('hide');
+      $(".total-order-btn").click(function () {
+        $(".overlay").toggle("hide");
+        $(".cart-modal").toggle("hide");
       });
 
-      $('.gowns-order-btn').click(function () {
-        $('.overlay2').toggle('hide');
-        $('.gowns-modal').toggle('hide');
+      $(".gowns-order-btn").click(function () {
+        $(".overlay2").toggle("hide");
+        $(".gowns-modal").toggle("hide");
       });
 
-      $('.fw-order-btn').click(function () {
-        $('.overlay3').toggle('hide');
-        $('.footwear-modal').toggle('hide');
+      $(".fw-order-btn").click(function () {
+        $(".overlay3").toggle("hide");
+        $(".footwear-modal").toggle("hide");
       });
 
       // When a user clicks on the amount button
-      $('.modal-item-btn').click(function () {
-        $(this).css('backgroundColor', '#4e854e');
-        $(this).text('Added');
-        cost += parseInt($(this).attr('value'));
-        $('.fw-order-btn').html(
-          'Items selected: ' + ++totalItems + '<br/>' + 'total cost: ' + cost
+      let gCost = 0;
+      let gTotalItems = 0;
+      $(".gbtn").click(function () {
+        $(this).css("backgroundColor", "#4e854e");
+        $(this).text("Added");
+        gCost += parseInt($(this).attr("value"));
+        $(".gcost").html(
+          "Items selected: " + ++gTotalItems + "<br/>" + "total cost: " + gCost
         );
       });
     });
 
     let fCost = 0;
     let fTotalItems = 0;
-    $('.fbtn').click(function () {
-      $(this).css('backgroundColor', '#4e854e');
-      $(this).text('Added');
-      fCost += parseInt($(this).attr('value'));
-      $('.fw-order-btn').html(
-        'Items selected: ' + ++fTotalItems + '<br/>' + 'total cost: ' + fCost
+    $(".fbtn").click(function () {
+      $(this).css("backgroundColor", "#4e854e");
+      $(this).text("Added");
+      fCost += parseInt($(this).attr("value"));
+      $(".fw-order-btn").html(
+        "Items selected: " + ++fTotalItems + "<br/>" + "total cost: " + fCost
       );
     });
 
     // When the Cart Icon is clicked
-    $('.shopping-cart-btn').click(function () {
-      $('.shop-cart-modal').slideToggle('medium');
+    $(".shopping-cart-btn").click(function () {
+      $(".shop-cart-modal").slideToggle("medium");
     });
 
     // Jewlery modal function for total cost
@@ -124,30 +126,30 @@ $(document).ready(function () {
     let jewelryCost = 0;
 
     // onLoadCartNumbers()
-    $('.jbtn').click(function () {
-      $(this).css('backgroundColor', '#4e854e');
-      $(this).text('Added');
-      jewelryCost += parseInt($(this).attr('value'));
-      $('.jcost div').html(
-        'Items selected: ' +
+    $(".jbtn").click(function () {
+      $(this).css("backgroundColor", "#4e854e");
+      $(this).text("Added");
+      jewelryCost += parseInt($(this).attr("value"));
+      $(".jcost div").html(
+        "Items selected: " +
           ++totalJewelryItems +
-          '<br/>' +
-          'total cost: ' +
+          "<br/>" +
+          "total cost: " +
           jewelryCost
       );
     });
     // When the close cart icon is clicked
-    $('.close-cart').click(function () {
-      $('.shop-cart-modal').slideToggle('medium');
+    $(".close-cart").click(function () {
+      $(".shop-cart-modal").slideToggle("medium");
     });
 
     // When Complete Order button is clicked
-    $('.complete-order').click(function () {
-      $('.complete-order').toggle('hide');
-      $('.cart-order-total').toggle('hide');
-      $('.cart-order-items').hide();
-      $('.cart-counter').text('0');
-      $('.alert').toggle('show');
+    $(".complete-order").click(function () {
+      $(".complete-order").toggle("hide");
+      $(".cart-order-total").toggle("hide");
+      $(".cart-order-items").hide();
+      $(".cart-counter").text("0");
+      $(".alert").toggle("show");
     });
   });
 });

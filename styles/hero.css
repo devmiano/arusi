@@ -197,9 +197,10 @@
 }
 
 .cart-heading {
-  font-size: 66px;
+  font-size: 46px;
   font-weight: 500;
   font-family: var(--title);
-  color: var(--accent1);
+  color: var(--textColor);
   padding-bottom: 20px;
 }
+

@@ -55,6 +55,7 @@
   font-size: 22px;
   border: none;
   cursor: pointer;
+  margin-top: 1.8rem;
 }
 
 .shopping-cart-btn {
@@ -66,7 +67,7 @@
 .cart-counter {
   color: var(--textColor);
   position: relative;
-  top: 0.6rem;
+  top: 0.1rem;
   font-size: 24px;
   font-weight: 700;
 }

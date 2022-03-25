@@ -86,12 +86,13 @@ $(document).ready(function () {
         $('.gowns-modal').toggle('hide');
       });
 
-      $('.fw-order-btn').click(function () {
+      $('.fcost').click(function () {
         $('.overlay3').toggle('hide');
         $('.footwear-modal').toggle('hide');
       });
 
       // When a user clicks on the amount button
+      // // FOOTWEAR 
       let total = 0;
       let totalItems = 0;
       $('.modal-item-btn').click(function () {
@@ -101,9 +102,12 @@ $(document).ready(function () {
         $('.fw-order-btn').html(
           'Items selected: ' + ++totalItems + '<br/>' + 'total cost: ' + total
         );
+        $('.order-counter').text(totalItems);
+        
       });
     });
 
+    // GOWNS
     let gCost = 0;
     let gTotalItems = 0;
     $('.gbtn').click(function () {
@@ -113,8 +117,14 @@ $(document).ready(function () {
       $('.gcost').html(
         'Items selected: ' + ++gTotalItems + '<br/>' + 'total cost: ' + gCost
       );
+      $('.order-counter').text(gTotalItems);
+      $('.cart').html(gTotalItems);
+      $('.amount').html(gCost);
+      $('.i').html("Total Amount");
+      $('.cart-empty').hide();
     });
 
+    // JEWELERY
     let fCost = 0;
     let fTotalItems = 0;
     $('.fbtn').click(function () {
@@ -124,11 +134,17 @@ $(document).ready(function () {
       $('.fcost').html(
         'Items selected: ' + ++fTotalItems + '<br/>' + 'total cost: ' + fCost
       );
+      $('.order-counter').text(fTotalItems);
+      $('.cart').html(fTotalItems);
+      $('.amount2').html(fCost);
+      $('.i2').html("Total Amount");
+      $('.cart-empty').hide();
     });
 
     // When the Cart Icon is clicked
     $('.shopping-cart-btn').click(function () {
       $('.shop-cart-modal').slideToggle('medium');
+      
     });
 
     // Jewlery modal function for total cost
@@ -141,12 +157,7 @@ $(document).ready(function () {
       $(this).css('backgroundColor', '#4e854e');
       $(this).text('Added');
       jewelryCost += parseInt($(this).attr('value'));
-      $('.jcost').html(
-        'Items selected: ' +
-          ++totalJewelryItems +
-          '<br/>' +
-          'total cost: ' +
-          jewelryCost
+      $('.jcost').html('Items selected: ' + ++totalJewelryItems + '<br/>' + 'total cost: ' +jewelryCost
       );
     });
     // When the close cart icon is clicked
@@ -159,7 +170,7 @@ $(document).ready(function () {
       $('.complete-order').toggle('hide');
       $('.cart-order-total').toggle('hide');
       $('.cart-order-items').hide();
-      $('.cart-counter').text('0');
+      $('.cart').text('0');
       $('.alert').toggle('show');
     });
   });
